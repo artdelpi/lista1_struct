@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Home() {
   const events = [
     { slug: "final-brasileirao", title: "Final do Brasileirão", tag: "Futebol", teams: ["Flamengo", "Palmeiras"] },
@@ -42,18 +40,12 @@ export default function Home() {
         </div>
         
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row pt-4">
-          <Link
-            href="/explore"
-            className="rounded-2xl bg-gradient-to-r from-fuchsia-500 to-purple-600 px-8 py-4 font-bold text-white hover:from-fuchsia-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-fuchsia-500/25"
-          >
+          <button className="rounded-2xl bg-gradient-to-r from-fuchsia-500 to-purple-600 px-8 py-4 font-bold text-white hover:from-fuchsia-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-fuchsia-500/25">
             Começar a Apostar
-          </Link>
-          <Link
-            href="/item/final-brasileirao"
-            className="rounded-2xl border-2 border-zinc-600 px-8 py-4 font-semibold hover:border-fuchsia-400 hover:text-fuchsia-400 transition-all duration-200"
-          >
+          </button>
+          <button className="rounded-2xl border-2 border-zinc-600 px-8 py-4 font-semibold hover:border-fuchsia-400 hover:text-fuchsia-400 transition-all duration-200">
             Ver Demonstração
-          </Link>
+          </button>
         </div>
       </header>
 
@@ -90,10 +82,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {events.map((event) => (
-            <Link
+            <div
               key={event.slug}
-              href={`/item/${event.slug}`}
-              className="group rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 transition-all duration-300 hover:border-fuchsia-500/50 hover:bg-zinc-900/50 hover:transform hover:scale-105"
+              className="group rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 transition-all duration-300 hover:border-fuchsia-500/50 hover:bg-zinc-900/50 hover:transform hover:scale-105 cursor-pointer"
             >
               {/* Event Header */}
               <div className="mb-4">
@@ -133,18 +124,15 @@ export default function Home() {
                   2
                 </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
         <div className="text-center pt-8">
-          <Link
-            href="/explore"
-            className="inline-flex items-center gap-2 rounded-2xl border-2 border-zinc-700 px-8 py-4 font-semibold hover:border-fuchsia-400 hover:text-fuchsia-400 transition-all duration-200 group"
-          >
+          <button className="inline-flex items-center gap-2 rounded-2xl border-2 border-zinc-700 px-8 py-4 font-semibold hover:border-fuchsia-400 hover:text-fuchsia-400 transition-all duration-200 group">
             Explorar Todos os Eventos
             <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </Link>
+          </button>
         </div>
       </section>
 
@@ -157,12 +145,9 @@ export default function Home() {
           <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
             Junte-se a milhares de apostadores que já descobriram a melhor forma de apostar
           </p>
-          <Link
-            href="/register"
-            className="inline-block rounded-2xl bg-gradient-to-r from-fuchsia-500 to-purple-600 px-10 py-4 font-bold text-white hover:from-fuchsia-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-fuchsia-500/25"
-          >
+          <button className="rounded-2xl bg-gradient-to-r from-fuchsia-500 to-purple-600 px-10 py-4 font-bold text-white hover:from-fuchsia-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-fuchsia-500/25">
             Criar Conta Gratuita
-          </Link>
+          </button>
         </div>
       </section>
     </section>
