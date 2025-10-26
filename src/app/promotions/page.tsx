@@ -119,34 +119,58 @@ export default function PromotionsPage() {
         
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center mb-8">
           {/* Seus cards de promoção aqui */}
-          <div className="rounded-3xl bg-gradient-to-r from-zinc-900 to-zinc-800 border border-zinc-700 p-12 w-1/2 h-full min-h-[350px] flex flex-col items-center justify-center text-center">
-            <div className="space-y-2">
-              <h3 className="font-bold">💵 Freebet R$50</h3>
-              <p className="text-sm text-gray-400">Grátis</p>
-            </div>
-            <button className="rounded-2xl bg-gradient-to-r from-fuchsia-500 to-purple-600 px-8 py-4 font-bold text-white hover:from-fuchsia-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-fuchsia-500/25 mt-6 cursor-pointer">
-              Pegar
+          <div className="rounded-3xl border border-zinc-700 w-1/2 h-full min-h-[350px] flex flex-col items-center justify-center text-center relative overflow-hidden">
+            <img 
+              src="/images/tenis.jpg" 
+              alt="Descrição" 
+              className="absolute inset-0 w-full h-full object-cover filter grayscale"
+            />
+            {/* Gradiente sobre a imagem */}
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-400 via-gray-700 to-black opacity-70 mix-blend-multiply"></div>
+
+            <h3 className="font-bold pt-10 z-10">Aposta grátis de R$50 para novos usuários</h3>
+            <p className="text-sm text-gray-400 z-10 pb-10">3 apostas grátis ao fazer cadastro</p>
+
+            <button className="absolute top-5/8 left-1/2 transform -translate-x-1/2 z-20 rounded-2xl bg-gradient-to-r from-fuchsia-500 to-purple-600 px-8 py-4 font-bold text-white hover:from-fuchsia-600 hover:to-purple-700
+             transition-all duration-200 transform hover:scale-105 shadow-lg shadow-fuchsia-500/25 cursor-pointer">
+              Participar
             </button>
           </div>
 
-          <div className="rounded-3xl bg-gradient-to-r from-zinc-900 to-zinc-800 border border-zinc-700 p-12 w-1/2 h-full min-h-[350px] flex flex-col items-center justify-center text-center">
-            <div className="space-y-2">
-              <h3 className="font-bold">💰Cashback 15%</h3>
-              <p className="text-sm text-gray-400">Todo fim de semana</p>
-            </div>
-            <button className="rounded-2xl bg-gradient-to-r from-fuchsia-500 to-purple-600 px-8 py-4 font-bold text-white hover:from-fuchsia-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-fuchsia-500/25 mt-6 cursor-pointer">
+          <div className="rounded-3xl border border-zinc-700 w-1/2 h-full min-h-[350px] flex flex-col items-center justify-center text-center relative overflow-hidden">
+            <img 
+              src="/images/luta.jpg" 
+              alt="Descrição" 
+              className="absolute inset-0 w-full h-full object-cover filter grayscale"
+            />
+            {/* Gradiente sobre a imagem */}
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-400 via-gray-700 to-black opacity-70 mix-blend-multiply"></div>
+
+            <h3 className="font-bold pt-10 z-10">Cashback de 10% toda semana</h3>
+            <p className="text-sm text-gray-400 z-10 pb-10">Perdeu? Devolvemos 50% em créditos</p>
+
+            <button className="absolute top-5/8 left-1/2 transform -translate-x-1/2 z-20 rounded-2xl bg-gradient-to-r from-fuchsia-500 to-purple-600 px-8 py-4 font-bold text-white hover:from-fuchsia-600 hover:to-purple-700
+             transition-all duration-200 transform hover:scale-105 shadow-lg shadow-fuchsia-500/25 cursor-pointer">
               Participar
             </button>
           </div>
         </div>
 
-        {/* Outra linha de promoção */}
-        <div className="rounded-3xl bg-gradient-to-r from-zinc-900 to-zinc-800 border border-zinc-700 p-12 w-full h-1/2 flex flex-col justify-center items-center space-y-4">
-          <div className="space-y-4 text-center">
-            <h3 className="font-bold">Ofertas de Pagamento Antecipado!</h3>
-            <p className="text-sm text-gray-400 pb-3">Disponíveis em uma variedade de esportes!</p>
+        {/* Outra linha de promoção - CORREÇÃO DEFINITIVA */}
+        <div className="rounded-3xl border border-zinc-700 p-12 w-full min-h-[500px] flex flex-col justify-center items-center relative overflow-hidden">
+            <img 
+              src="/images/chute.png" 
+              alt="Descrição" 
+              className="absolute inset-0 w-full h-full object-cover filter grayscale"
+            />
+            {/* Gradiente sobre a imagem - CORREÇÃO RADICAL */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-gray-400 via-gray-700 to-black opacity-80"></div>
+  
+          <div className="space-y-4 text-center relative z-10 w-full">
+            <h3 className="font-bold text-xl">Ofertas de Pagamento Antecipado!</h3>
+            <p className="text-sm text-gray-300">Disponíveis em uma variedade de esportes!</p>
             
-            <div className="flex justify-center gap-4 ">
+            <div className="flex justify-center gap-4 mt-8">
               <div className="rounded-3xl bg-gradient-to-r from-zinc-900 to-zinc-800 border border-zinc-700 p-6 w-1/4 min-h-[120px] min-w-[120px] flex items-center justify-center hover:border-fuchsia-500 hover:text-fuchsia-400 transition-all duration-200 cursor-pointer">
                 <h3 className="font-bold">Futebol</h3>
               </div>
